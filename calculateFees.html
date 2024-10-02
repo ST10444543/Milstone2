@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering the Nation - Calculate Fees</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <h1>Empowering the Nation</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sixMonthCourses.html">6-Month Courses</a></li>
+                <li><a href="sixWeekCourses.html">6-Week Courses</a></li>
+                <li><a href="calculateFees.html">Calculate Fees</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Calculate Total Fees Section -->
+    <section id="calculateFees">
+        <h2>Calculate Total Fees</h2>
+        <form id="quoteForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <input type="submit" value="Submit">
+            <h3>Select Courses:</h3>
+            <input type="checkbox" id="firstAidCheckbox" name="courses" value="1500">
+            <label for="firstAidCheckbox">First Aid - R1500</label><br>
+
+            <input type="checkbox" id="sewingCheckbox" name="courses" value="1500">
+            <label for="sewingCheckbox">Sewing - R1500</label><br>
+
+            <input type="checkbox" id="landscapingCheckbox" name="courses" value="1500">
+            <label for="landscapingCheckbox">Landscaping - R1500</label><br>
+
+            <input type="checkbox" id="lifeSkillsCheckbox" name="courses" value="1500">
+            <label for="lifeSkillsCheckbox">Life Skills - R1500</label><br>
+
+            <input type="checkbox" id="childMindingCheckbox" name="courses" value="750">
+            <label for="childMindingCheckbox">Child Minding - R750</label><br>
+
+            <input type="checkbox" id="cookingCheckbox" name="courses" value="750">
+            <label for="cookingCheckbox">Cooking - R750</label><br>
+
+            <input type="checkbox" id="gardenMaintenanceCheckbox" name="courses" value="750">
+            <label for="gardenMaintenanceCheckbox">Garden Maintenance - R750</label><br>
+
+            <button type="button" onclick="calculateTotal()">Calculate Total Fees</button>
+        </form>
+        <p id="totalFee"></p>
+    </section>
+
+    <img src="log/log. JPG" width="200px" height="150px" class="myImage">
+
+    <script src="script.js"></script>
+    <footer>
+        <div class="container-contents">
+            <!-- Your existing footer content -->
+    
+            <div class="row-gray"></div>
+            <p class="reference-tchossy">
+                This site was developed by
+                <span class="tchossy">Madima Asataluli</span>
+            </p>
+            <p class="copyright">
+                &copy; 2024 Tell All. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering the Nation - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.contact-form form');
+
+            form.addEventListener('submit', function (event) {
+                let valid = true; // Track validity of form
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+
+                // Reset previous alerts
+                clearAlerts();
+
+                if (!name) {
+                    alert('Name is required!');
+                    valid = false;
+                }
+
+                if (!email) {
+                    alert('Email is required!');
+                    valid = false;
+                } else if (!validateEmail(email)) {
+                    alert('Please enter a valid email address!');
+                    valid = false;
+                }
+
+                if (!valid) {
+                    event.preventDefault(); // Prevent form submission if invalid
+                }
+            });
+
+            function clearAlerts() {
+                // Clear any previous alerts if necessary
+            }
+
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple regex for email validation
+                return re.test(email);
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <h1>Empowering the Nation</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sixMonthCourses.html">6-Month Courses</a></li>
+                <li><a href="sixWeekCourses.html">6-Week Courses</a></li>
+                <li><a href="calculateFees.html">Calculate Fees</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, feel free to reach out to us using the contact information below.</p>
+
+        <div class="contact-details">
+            <h3>Get in Touch</h3>
+            <p>Phone: 123-456-7890</p>
+            <p>Email: info@empoweringthenation.com</p>
+            <p>Address: 123 Main St, Johannesburg</p>
+        </div>
+
+        <div class="contact-form">
+            <h3>Contact Form</h3>
+            <form action="mailto:example@example.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <img src="log/log. JPG" width="400px" height="200px" class="myImage">
+
+    <script src="script.js"></script>
+
+    <footer>
+        <div class="container-contents">
+            <!-- Your existing footer content -->
+    
+            <div class="row-gray"></div>
+            <p class="reference-tchossy">
+                This site was developed by
+                <span class="tchossy">Madima Asataluli</span>
+            </p>
+            <p class="copyright">
+                &copy; 2024 Tell All. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
